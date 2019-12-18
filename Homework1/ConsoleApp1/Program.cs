@@ -35,7 +35,7 @@ namespace ConsoleApp1
 
                 if (choice == 3)
                 {
-                    Console.WriteLine("Under Maintanence");
+                    UserLoop123();
 
                 }
 
@@ -43,6 +43,8 @@ namespace ConsoleApp1
 
                 string userinput = Console.ReadKey().KeyChar.ToString();
                 continuerunning = userinput.ToLower() == "y";
+
+                Console.WriteLine(Environment.NewLine);
             
 
             } while (continuerunning==true);
@@ -88,6 +90,22 @@ namespace ConsoleApp1
 
         }
 
+        static void UserLoop123()
+        {
+
+            Console.WriteLine("Please choose between 1 to 3.");
+            int count = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            while (i < count)
+            {
+                Console.WriteLine("what's up");
+                i = i + 1;
+            }
+
+
+
+        }
     }
 
 }

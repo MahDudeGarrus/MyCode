@@ -301,14 +301,14 @@ namespace StarClasses
 
             }
 
-            if ((_temperature >= 2800 && _temperature <= 6000) && (_absoluteMagnitude > -2 && _absoluteMagnitude < 2))
+            if ((_temperature >= 2800 && _temperature <= 6000) && (_absoluteMagnitude > -2.5 && _absoluteMagnitude < 2))
             {
                 if (_mass > _sunMass)
                     _starClass = StarClass.Giant;
                 return _starClass;
             }
 
-           
+
 
             if ((_temperature >=5001 && _temperature <=6000)  && (_absoluteMagnitude < 6 && _absoluteMagnitude >3))
             {

@@ -14,9 +14,7 @@ namespace StarClasses
         {
 
 
-
         }
-
 
         [Test]
 
@@ -35,7 +33,7 @@ namespace StarClasses
         {
             var star = new Star(name: "Betelgeuse", temp: 3500, mass: 11, absolutem: -5.85, distance: "642.5 light years", age: "10.01 million years");
             var value = star.GetStarClass();
-            var expected = StarClass.Giant;
+            var expected = StarClass.Supergiant;
 
             Assert.AreEqual(expected, value);
 

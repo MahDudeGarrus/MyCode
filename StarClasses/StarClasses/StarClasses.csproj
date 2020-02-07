@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileManager.cs" />
     <Compile Include="LifeCycleAD.cs" />
     <Compile Include="LifeCycleBC.cs" />
     <Compile Include="Program.cs" />

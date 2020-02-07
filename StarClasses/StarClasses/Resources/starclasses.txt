@@ -1,0 +1,51 @@
+﻿BC 
+1. Protostar
+2.
+
+AC.
+Path2 1. Main Sequence  
+	 2. Red Giant  luminosity increased and temperature decreases
+	 3. Death
+	 4. White Dwarf
+	 5. Nebula
+	 
+Path2 1. Main Sequence
+	 2. Super Giant or Giant
+	 3. Supernovae
+	 4. Black hole or Neutron Star
+	 
+	 
+	 MainSequence 
+	 
+	 
+	 Star Classes
+	 
+	 1. Main Sequence 1
+	 Absolute Mag: 17 - 7
+	 Temperature:2400 - 4800
+	 
+	 2. Main Sequence 2
+	 Absolute Mag: 6 - 4
+	 Temperature:4801 - 6000 
+	 
+	 3. Main Sequence 3
+	 Absolute Mag: 5 - -3
+	 Temperature: >6001
+	 
+	 4. Giant
+	 Absolute Mag: 4 - -3
+	 Temperature:2800 - 5200
+	 
+	 
+	 5. Super Giant
+	 Absolute Mag: -4 - -10
+	 Temperature:2800 - 30000
+	 
+	 
+	 6. White Dwarf
+	 Absolute Mag: 18 to 10
+	 Temperature:2400-4800
+	 
+	 
+	 
+	 

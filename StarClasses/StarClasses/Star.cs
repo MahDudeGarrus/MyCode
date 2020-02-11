@@ -42,6 +42,11 @@ namespace StarClasses
             set { _spectralClass = value; }
         }
 
+        public StarClass StarClass
+        {
+            get { return _starClass; }
+            set { _starClass = value; }
+        }
 
 
         public string Name { get => _name; set => _name = value; }
@@ -89,11 +94,12 @@ namespace StarClasses
         /// <param name="name"></param>
         /// <param name="temp"></param>
         /// <param name="mass"></param>
-        public Star(string name, int temp, double mass)
+        public Star(string name, int temp, double mass, SpectralClass spectralClass)
         {
             _name = name;
             _temperature = temp;
             _mass = mass;
+            _spectralClass = spectralClass;
         }
 
 

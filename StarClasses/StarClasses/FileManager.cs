@@ -14,6 +14,8 @@ namespace StarClasses
         public static List<Star> LoadStarFile(string filePath)
         {
 
+ 
+
             if (!File.Exists(filePath))
             {
                 Console.WriteLine("File doesn't exist, check file path and file name");

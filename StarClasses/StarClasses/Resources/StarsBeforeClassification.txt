@@ -1,0 +1,3 @@
+Sun|1|5800|G
+Betelgeuse|11|3500|K
+Sirius|2.02|9940|A

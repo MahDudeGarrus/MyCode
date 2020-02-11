@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace StarClasses
 {
@@ -81,6 +83,71 @@ namespace StarClasses
 
             Assert.AreEqual(expected, value);
 
+        }
+
+
+        [Test]
+        public void ParseProperly_FromFile__ReturnStarClass()
+        {
+            var filePath = AppDomain.CurrentDomain.BaseDirectory + "Resources\\StarsBeforeClassification.txt";
+            var actualStars = FileManager.LoadStarFile(filePath);
+
+
+            var expectedStars = new List<Star>();
+
+            expectedStars.Add(new Star("Sun", 5800, 1, SpectralClass.G));
+            expectedStars.Add(new Star("Betelgeuse", 3500, 11, SpectralClass.K));
+            expectedStars.Add(new Star("Sirius", 9940, 2.02, SpectralClass.A));
+
+            Assert.AreEqual(expectedStars[0].Name, actualStars[0].Name);
+            Assert.AreEqual(expectedStars[1].Name, actualStars[1].Name);
+            Assert.AreEqual(expectedStars[2].Name, actualStars[2].Name);
+
+            Assert.AreEqual(expectedStars[0].Mass, actualStars[0].Mass);
+            Assert.AreEqual(expectedStars[1].Mass, actualStars[1].Mass);
+            Assert.AreEqual(expectedStars[2].Mass, actualStars[2].Mass);
+
+            Assert.AreEqual(expectedStars[0].Temperature, actualStars[0].Temperature);
+            Assert.AreEqual(expectedStars[1].Temperature, actualStars[1].Temperature);
+            Assert.AreEqual(expectedStars[2].Temperature, actualStars[2].Temperature);
+
+            Assert.AreEqual(expectedStars[0].SpectralClass, actualStars[0].SpectralClass);
+            Assert.AreEqual(expectedStars[1].SpectralClass, actualStars[1].SpectralClass);
+            Assert.AreEqual(expectedStars[2].SpectralClass, actualStars[2].SpectralClass);
+        }
+
+
+        [Test]
+        public void GetStarClass_FromFile__ReturnStarClass()
+        {
+            var filePath = AppDomain.CurrentDomain.BaseDirectory + "Resources\\StarsBeforeClassification.txt";
+            var actualStars = FileManager.LoadStarFile(filePath);
+
+
+            var expectedStars = new List<Star>();
+
+            expectedStars.Add(new Star("Sun", 5800, 1, SpectralClass.G));
+            expectedStars.Add(new Star("Betelgeuse", 3500, 11, SpectralClass.K));
+            expectedStars.Add(new Star("Sirius", 9940, 2.02, SpectralClass.A));
+
+            GetStarClass(actualStars);
+            GetStarClass(expectedStars);
+
+            Assert.AreEqual(expectedStars[0].StarClass, actualStars[0].StarClass);
+            Assert.AreEqual(expectedStars[1].StarClass, actualStars[1].StarClass);
+            Assert.AreEqual(expectedStars[2].StarClass, actualStars[2].StarClass);
+
+        }
+
+
+        private void GetStarClass(List<Star> stars)
+        {
+            foreach (Star star in stars)
+            {
+
+                star.GetStarClass();
+
+            }
         }
     }
 }

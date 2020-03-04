@@ -31,7 +31,7 @@ namespace DataFetchApp
             try
             {
                 var random = new Random(DateTime.Now.Millisecond);
-                var num = random.Next(1, 1000);
+                var num = random.Next(1, 50);
 
                 return num;
             }

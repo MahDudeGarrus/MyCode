@@ -12,22 +12,20 @@ namespace DataFetchApp
 {
     public partial class Form1 : Form
     {
+
+        int _counter = 0;
+        int _retrylimit = 100;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        int _counter = 0;
-        int _retrylimit = 500;
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-           
-
+          
             var data = FetchData();
-
-
 
             if (data != null)
             {
@@ -36,14 +34,12 @@ namespace DataFetchApp
 
                 var textToDisplay = date + Environment.NewLine + textData;
                 MessageBox.Show("Tries before success: " + _counter);
-
                 textBox1.Text = textToDisplay;
-
-
             }
             else
             {
-                textBox1.Text = "Error fetching data.";
+                textBox1.Text = "Error fetching data." + Environment.NewLine +
+                    "Retries has reached maxmium: " + _retrylimit;
             }
 
             _counter = 0;
@@ -55,19 +51,13 @@ namespace DataFetchApp
         {
             var data = FetchMessageData.FetchData();
             
-
             if (data == null && _counter < _retrylimit)
             {
                 _counter++;
-                //System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(20);
                 textBox1.Text = "retry : + " + _counter;
                 textBox1.Refresh();
-                //Console.WriteLine("Data was null, trying to fetch data again.");
                 data = FetchData();
-            }
-            else
-            {
-                MessageBox.Show("Retries has reached maxmium: " + _retrylimit);
             }
 
             return data;
